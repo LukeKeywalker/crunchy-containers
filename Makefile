@@ -25,7 +25,7 @@ IMG_PUSHER_PULLER ?= docker
 # not enabled
 IMGCMDSUDO=
 ifneq ("$(IMG_ROOTLESS_BUILD)", "true")
-	IMGCMDSUDO=sudo --preserve-env
+	IMGCMDSUDO=''
 endif
 IMGCMDSTEM=$(IMGCMDSUDO) buildah bud --layers $(SQUASH)
 DFSET=$(CCP_BASEOS)
