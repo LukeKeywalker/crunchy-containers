@@ -29,7 +29,7 @@ ifneq ("$(IMG_ROOTLESS_BUILD)", "true")
 endif
 IMGCMDSTEM=$(IMGCMDSUDO) buildah bud --layers $(SQUASH)
 DFSET=$(CCP_BASEOS)
-DOCKERBASEREGISTRY=registry.access.redhat.com/
+DOCKERBASEREGISTRY=container-image-registry:31000/
 
 # Default the buildah format to docker to ensure it is possible to pull the images from a docker
 # repository using docker (otherwise the images may not be recognized)
